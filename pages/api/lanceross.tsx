@@ -191,7 +191,7 @@ export default async function handler(req: NextRequest) {
                 marginTop: "2px",
               }}
             >
-              lanceross.xyz
+              blog.lanceross.xyz
             </span>
           </div>
           <div
