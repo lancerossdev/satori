@@ -19,7 +19,6 @@ export default function Home() {
         <meta property="twitter:title" content="OG Images for Lance Ross" />
         <meta property="twitter:description" content="Open Graph Images template for Lance Ross powered by Next.js and Vercel." />
         <meta property="twitter:image" content="/api/lanceross?title=OG+Images+for+Lance Ross" />
-        <script async defer data-website-id="068d35a9-f000-43ea-b44e-4e005765895c" src="https://umami.lanceross.xyz/umami.js"></script>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
