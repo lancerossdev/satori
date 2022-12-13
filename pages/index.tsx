@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+
+const cardClasses = "bg-zinc-800/60 p-5 rounded-2xl shadow-xl hover:text-zinc-100 hover:ring-4 ring-zinc-800 transition-all";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="bg-zinc-900 text-white">
       <Head>
         <title>OG Images for Lance Ross</title>
         <meta name="title" content="OG Images for Lance Ross" />
@@ -21,32 +21,34 @@ export default function Home() {
         <meta property="twitter:image" content="/api/lanceross?title=OG+Images+for+Lance Ross" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/api/example.tsx</code>
-        </p>
-        <div className={styles.grid}>
-          <a href="/api/lanceross?title=Your+Title+Here" className={`${styles.card} umami--click--main-template`}>
-            <h2>Main Template</h2>
-            <p>This OG Image template is what I use for my personal website.</p>
-          </a>
-          <a href="/api/old?title=Your+Title+Here" className={`${styles.card} umami--click--old-template`}>
-            <h2>Old Template</h2>
-            <p>This is my old template with I still use Netlify Edge Functions</p>
-          </a>
-          <a href="/api/example?text=Hello+Pearl!" className={`${styles.card} umami--click--example-og`}>
-            <h2>Example</h2>
-            <p>Wanna try it? Click this to generate an image with "Hello Pearl!"</p>
-          </a>
-          <a href="https://vercel.com/" target="_blank" rel="noopener" className={`${styles.card} umami--click--vercel-click`}>
-            <h2>Deploy</h2>
-            <p>Instantly deploy this project template to a public URL with Vercel.</p>
-          </a>
+      <div className="flex flex-col items-center min-h-screen justify-center relative antialiased">
+        <div className="max-w-xl md:max-w-3xl text-lg px-6 pt-10 pb-20 lg:pb-10">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-8 tracking-tight">
+            Open Graph Images
+          </h1>
+          <p className="mb-12">
+            Get started by generating an Open Graph image down below.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <a href="/api/lanceross?title=Your+Title+Here" className={`umami--click--main-template ${cardClasses}`}>
+              <h2 className="text-xl sm:text-2xl mt-1 mb-3">Main Template</h2>
+              <p>This OG Image template is what I use for my personal website.</p>
+            </a>
+            <a href="/api/old?title=Your+Title+Here" className={`umami--click--old-template ${cardClasses}`}>
+              <h2 className="text-xl sm:text-2xl mt-1 mb-3">Old Template</h2>
+              <p>This is my old template with I still use Netlify Edge Functions.</p>
+            </a>
+            <a href="/api/example?text=Hello+Pearl!" className={`umami--click--example-og ${cardClasses}`}>
+              <h2 className="text-xl sm:text-2xl mt-1 mb-3">Example</h2>
+              <p>Wanna try it? Click this to generate an image with "Hello Pearl!"</p>
+            </a>
+            <a href="https://vercel.com/" target="_blank" rel="noopener" className={`umami--click--vercel-click ${cardClasses}`}>
+              <h2 className="text-xl sm:text-2xl mt-1 mb-3">Deploy</h2>
+              <p>Instantly deploy this project template with Vercel.</p>
+            </a>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
